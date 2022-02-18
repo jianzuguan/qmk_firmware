@@ -29,7 +29,7 @@ enum layers {
 #define FPS      DF(_FPS)
 
 #define BASE     TO(_DEFAULT)
-#define NUM      TT(_NUM)
+#define NUM      TG(_NUM)
 #define SYM      TT(_SYM)
 #define NAV      TT(_NAV)
 #define TT_MOUSE TT(_MOUSE)
