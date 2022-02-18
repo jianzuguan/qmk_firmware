@@ -26,7 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID 0x3436
 #define DEVICE_VER 0x0001
 
-
 /* mouse config */
 #define MOUSEKEY_INTERVAL    20
 #define MOUSEKEY_DELAY       0
@@ -47,6 +46,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Enables This makes it easier for fast typists to use dual-function keys */
 #define PERMISSIVE_HOLD
+
+#define TAPPING_TOGGLE 2
 
 /* key matrix size */
 // Rows are doubled-up
