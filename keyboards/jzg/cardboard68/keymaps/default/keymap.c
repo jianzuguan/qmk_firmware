@@ -36,7 +36,7 @@ enum layers {
 #define TG_MOUSE TG(_MOUSE)
 
 #define UK_BSLS  KC_NUBS
-#define UK_PIPE  LSFT(NUBS)
+#define UK_PIPE  LSFT(KC_NUBS)
 #define UK_DQUO  LSFT(KC_2)
 #define UK_AT    LSFT(KC_QUOT)
 #define UK_HASH  KC_NUHS
