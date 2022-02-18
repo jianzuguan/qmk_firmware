@@ -32,7 +32,17 @@ enum layers {
 #define NUM      TT(_NUM)
 #define SYM      TT(_SYM)
 #define NAV      TT(_NAV)
-#define MOUSE    TT(_MOUSE)
+#define MOUSE TT(_MOUSE)
+#define TT_MOUSE TT(_MOUSE)
+#define TG_MOUSE TG(_MOUSE)
+
+#define UK_BSLS  KC_NUBS
+#define UK_PIPE  LSFT(NUBS)
+#define UK_DQUO  LSFT(KC_2)
+#define UK_AT    LSFT(KC_QUOT)
+#define UK_HASH  KC_NUHS
+#define UK_TILD  LSFT(KC_NUHS)
+#define UK_TAIL  LSFT(KC_GRV)
 
 
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
@@ -52,9 +62,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SYM] = LAYOUT(
         _______, _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______, _______,
-        _______, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC, _______,                      _______, KC_CIRC, KC_AMPR, KC_ASTR, KC_DQUO, XXXXXXX, _______, 
-        _______, XXXXXXX, KC_TILD, KC_PLUS, KC_LBRC, KC_RBRC, _______,                      _______, KC_LPRN, KC_RPRN, KC_MINS, KC_QUOT, KC_PSTE, _______, 
-        _______, KC_BSLS, KC_PIPE, KC_UNDS, KC_LCBR, KC_RCBR, _______, _______,    _______, _______,   KC_LT,   KC_GT,  KC_EQL, KC_GRV,  KC_QUES, _______, 
+        _______, KC_EXLM,   UK_AT, UK_HASH,  KC_DLR, KC_PERC, _______,                      _______, KC_CIRC, KC_AMPR, KC_ASTR, UK_DQUO, XXXXXXX, _______, 
+        _______, UK_TAIL, UK_TILD, KC_PLUS, KC_LCBR, KC_RCBR, _______,                      _______, KC_LPRN, KC_RPRN, KC_MINS, KC_QUOT, KC_QUES, _______, 
+        _______, UK_BSLS, UK_PIPE, KC_UNDS, KC_LBRC, KC_RBRC, _______, _______,    _______, _______,   KC_LT,   KC_GT,  KC_EQL, KC_GRV,  KC_SLSH, _______, 
                                    _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______
     ), 
 
