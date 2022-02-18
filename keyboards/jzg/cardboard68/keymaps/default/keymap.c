@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, KC_WH_U, KC_WH_L, KC_MS_U, KC_WH_R, KC_VOLU, _______,                      _______,     FPS, KC_VOLU, KC_PAUS, KC_MPRV, _______, _______,
         _______, KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, KC_VOLD, _______,                      _______,  QWERTY, KC_VOLD, KC_MPLY, KC_MNXT, _______, _______,
         _______, _______, KC_WBAK, KC_WREF, KC_WFWD, KC_MUTE, _______, _______,    _______, _______, _______, KC_MUTE, _______, _______, _______, _______,
-                                   _______, _______, KC_MS_R, KC_MS_L, _______,    _______, _______, _______, _______, _______
+                                   _______, _______, KC_BTN1, KC_BTN3, _______,    _______, _______, _______, _______, _______
     ), 
 
     [_NUM] = LAYOUT(
