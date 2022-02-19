@@ -26,14 +26,15 @@ enum layers {
 
 // Aliases for readability
 #define QWERTY   DF(_DEFAULT)
-#define FPS      DF(_FPS)
 
+#define FPS      TO(_FPS)
 #define BASE     TO(_DEFAULT)
+
 #define NUM      TG(_NUM)
 #define SYM      TT(_SYM)
 #define NAV      TT(_NAV)
-#define TT_MOUSE TT(_MOUSE)
 #define TG_MOUSE TG(_MOUSE)
+#define TT_MOUSE TT(_MOUSE)
 
 #define UK_BSLS  KC_NUBS
 #define UK_PIPE  LSFT(KC_NUBS)
