@@ -53,11 +53,11 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_DEFAULT] = LAYOUT(
-          KC_F12, KC_1, KC_2,    KC_3,    KC_4,    KC_5,   KC_F5,                       KC_PSCR,    KC_6,     KC_7,    KC_8,   KC_9,    KC_0,  KC_DEL,
-          KC_TAB, KC_Q, KC_W,    KC_E,    KC_R,    KC_T,  KC_DEL,                          BASE,    KC_Y,     KC_U,    KC_I,   KC_O,    KC_P, KC_BSPC,
-          KC_ESC, KC_A, KC_S,    KC_D,    KC_F,    KC_G,  KC_ENT,                      TG_MOUSE,    KC_H,     KC_J,    KC_K,   KC_L, KC_SCLN,  KC_ENT,
-         KC_LSFT, KC_Z, KC_X,    KC_C,    KC_V,    KC_B,     NUM, KC_LGUI,    KC_RGUI,  KC_CAPS,    KC_N,     KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
-                                 BASE, KC_LALT, KC_LCTL,  KC_SPC,     SYM,        NAV,   KC_SPC, KC_RCTL, TT_MOUSE, KC_RALT
+          KC_F12, KC_1, KC_2,    KC_3,    KC_4,    KC_5,   KC_F5,                        KC_PSCR,    KC_6,     KC_7,    KC_8,   KC_9,    KC_0,  KC_DEL,
+          KC_TAB, KC_Q, KC_W,    KC_E,    KC_R,    KC_T,  KC_DEL,                           BASE,    KC_Y,     KC_U,    KC_I,   KC_O,    KC_P, KC_BSPC,
+          KC_ESC, KC_A, KC_S,    KC_D,    KC_F,    KC_G,  KC_ENT,                       TG_MOUSE,    KC_H,     KC_J,    KC_K,   KC_L, KC_SCLN,  KC_ENT,
+         KC_LSFT, KC_Z, KC_X,    KC_C,    KC_V,    KC_B,     NUM,  KC_LGUI,    KC_RGUI,  KC_CAPS,    KC_N,     KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+                                 BASE, KC_LALT, KC_LCTL,  KC_SPC, TT_MOUSE,        NAV,      SYM,  KC_SPC,  KC_RCTL, KC_RALT
     ),
 
     [_SYM] = LAYOUT(
@@ -78,9 +78,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_MOUSE] = LAYOUT(
         _______, _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______, _______,
-        _______, KC_WH_U, KC_WH_L, KC_MS_U, KC_WH_R, KC_VOLU, _______,                      _______, XXXXXXX, KC_VOLU, KC_PAUS, KC_MPRV, XXXXXXX, _______,
-        _______, KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, KC_VOLD, _______,                      _______,     FPS, KC_VOLD, KC_MPLY, KC_MNXT, XXXXXXX, _______,
-        _______, _______, KC_WBAK, KC_WREF, KC_WFWD, KC_MUTE, _______, _______,    _______, _______, XXXXXXX, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+        _______, KC_VOLU, KC_WH_L, KC_MS_U, KC_WH_R, KC_WH_U, _______,                      _______, XXXXXXX, KC_VOLU, KC_PAUS, KC_MPRV, XXXXXXX, _______,
+        _______, KC_VOLD, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,                      _______,     FPS, KC_VOLD, KC_MPLY, KC_MNXT, XXXXXXX, _______,
+        _______, KC_MUTE, KC_WBAK, KC_WREF, KC_WFWD, XXXXXXX, _______, _______,    _______, _______, XXXXXXX, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, _______,
                                    _______, _______, KC_BTN2, KC_BTN1, _______,    _______, _______, _______, _______, _______
     ), 
 
