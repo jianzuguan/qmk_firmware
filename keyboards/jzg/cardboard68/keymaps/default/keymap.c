@@ -74,8 +74,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_F12, KC_1, KC_2,    KC_3,    KC_4,    KC_5,   KC_F5,                        KC_PSCR,    KC_6,     KC_7,    KC_8,   KC_9,    KC_0,  KC_DEL,
           KC_TAB, KC_Q, KC_W,    KC_E,    KC_R,    KC_T,  KC_DEL,                       MAC_DFLT,    KC_Y,     KC_U,    KC_I,   KC_O,    KC_P, KC_BSPC,
           KC_ESC, KC_A, KC_S,    KC_D,    KC_F,    KC_G,  KC_ENT,                       TG_MOUSE,    KC_H,     KC_J,    KC_K,   KC_L, KC_SCLN,  KC_ENT,
-         KC_LSFT, KC_Z, KC_X,    KC_C,    KC_V,    KC_B,     NUM,  KC_LGUI,    KC_RGUI,  KC_CAPS,    KC_N,     KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
-                             MAC_DFLT, KC_LALT, KC_LCTL,  KC_SPC, TT_MOUSE,        NAV,  MAC_SYM,  KC_SPC,  KC_RCTL, KC_RALT
+         KC_LSFT, KC_Z, KC_X,    KC_C,    KC_V,    KC_B,     NUM,  KC_LCTL,    KC_RCTL,  KC_CAPS,    KC_N,     KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+                             MAC_DFLT, KC_LCMD, KC_LCMD,  KC_SPC, TT_MOUSE,        NAV,  MAC_SYM,  KC_SPC,  KC_RCMD, KC_ROPT
     ),
 
     [_MAC_SYM] = LAYOUT(
