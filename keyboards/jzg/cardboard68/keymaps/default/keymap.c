@@ -46,6 +46,13 @@ enum layers {
 #define UK_TILD  LSFT(KC_NUHS)
 #define UK_TAIL  LSFT(KC_GRV)
 
+#define MAC_DQUO  LSFT(KC_QUOT)
+#define MAC_AT    LSFT(KC_2)
+#define MAC_HASH  LALT(KC_3)
+#define MAC_GRV   KC_BSLS
+#define MAC_TILD  LSFT(KC_GRV)
+#define MAC_BSLS  KC_NUHS
+#define MAC_PIPE  LSFT(KC_NUHS)
 
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
@@ -79,11 +86,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_MAC_SYM] = LAYOUT(
-        _______, _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______, _______,
-        _______, KC_EXLM,   UK_AT, UK_HASH,  KC_DLR, KC_PERC, _______,                      _______, KC_CIRC, KC_AMPR, KC_ASTR, UK_DQUO, XXXXXXX, _______, 
-        _______, UK_TAIL, UK_TILD, KC_PLUS, KC_LCBR, KC_RCBR, _______,                      _______, KC_LPRN, KC_RPRN,  KC_EQL, KC_QUOT, KC_QUES, _______, 
-        _______, UK_BSLS, UK_PIPE, KC_UNDS, KC_LBRC, KC_RBRC, _______, _______,    _______, _______,   KC_LT,   KC_GT, KC_MINS, KC_GRV,  KC_SLSH, _______, 
-                                   _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______
+        _______,  _______,  _______,  _______, _______, _______, _______,                      _______, _______, _______, _______,  _______, _______, _______,
+        _______,  KC_EXLM,   MAC_AT, MAC_HASH,  KC_DLR, KC_PERC, _______,                      _______, KC_CIRC, KC_AMPR, KC_ASTR, MAC_DQUO, XXXXXXX, _______, 
+        _______,  UK_TAIL, MAC_TILD,  KC_PLUS, KC_LCBR, KC_RCBR, _______,                      _______, KC_LPRN, KC_RPRN,  KC_EQL,  KC_QUOT, KC_QUES, _______, 
+        _______, MAC_BSLS, MAC_PIPE,  KC_UNDS, KC_LBRC, KC_RBRC, _______, _______,    _______, _______,   KC_LT,   KC_GT, KC_MINS, MAC_GRV,  KC_SLSH, _______, 
+                                      _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______
     ), 
 
     [_NUM] = LAYOUT(
