@@ -12,6 +12,18 @@ This is a keyboard firmware based on the [tmk_keyboard firmware](https://github.
 
 [/keyboards/jzg/cardboard68/keymaps/default/keymap.c](/keyboards/jzg/cardboard68/keymaps/default/keymap.c)
 
+To compile
+```bash
+qmk compile -kb jzg/cardboard68 -km default 
+```
+
+Hex file will be available in `qmk_firmware/.build/jzg_cardboard68_default.hex`
+
+Use QMK Toolbox to flash the hex file to the keyboard.
+
+![Pro Micro flash guide](./pro-micro-flash-guide.png)
+
+
 ## Documentation
 
 -   [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
