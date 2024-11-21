@@ -29,6 +29,9 @@ enum layers {
 };
 
 // Aliases for readability
+#define MT_LSFT  MT(MOD_LSFT, KC_CAPS)
+#define MT_RSFT  MT(MOD_RSFT, KC_CAPS)
+
 #define WIN_DFLT TO(_WIN_DFLT)
 #define MAC_DFLT TO(_MAC_DFLT)
 #define FPS      TO(_FPS)
@@ -53,10 +56,11 @@ enum layers {
 #define MAC_DQUO  LSFT(KC_QUOT)
 #define MAC_AT    LSFT(KC_2)
 #define MAC_HASH  LALT(KC_3)
-#define MAC_GRV   KC_BSLS
+#define MAC_GRV   KC_GRV
 #define MAC_TILD  LSFT(KC_GRV)
 #define MAC_BSLS  KC_NUHS
 #define MAC_PIPE  LSFT(KC_NUHS)
+#define MAC_DBLS  KC_NUBS // Section symbol, double S
 
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
@@ -69,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_F12, KC_F1, KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_BSPC,                       KC_PSCR,   KC_F6,    KC_F7,   KC_F8,  KC_F9,  KC_F10,  KC_F11,
           KC_TAB,  KC_Q,  KC_W,    KC_E,    KC_R,    KC_T,   KC_DEL,                      WIN_DFLT,    KC_Y,     KC_U,    KC_I,   KC_O,    KC_P, KC_BSPC,
           KC_ESC,  KC_A,  KC_S,    KC_D,    KC_F,    KC_G,   KC_ENT,                      TG_MOUSE,    KC_H,     KC_J,    KC_K,   KC_L, KC_SCLN,  KC_ENT,
-         KC_LSFT,  KC_Z,  KC_X,    KC_C,    KC_V,    KC_B, TG_MOUSE, KC_LGUI,    KC_RGUI,  KC_CAPS,    KC_N,     KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+         MT_LSFT,  KC_Z,  KC_X,    KC_C,    KC_V,    KC_B, TG_MOUSE, KC_LGUI,    KC_RGUI,  KC_CAPS,    KC_N,     KC_M, KC_COMM, KC_DOT, KC_SLSH, MT_RSFT,
                                WIN_DFLT, KC_LALT, KC_LCTL,   KC_SPC, WIN_NUM,    WIN_NAV,  WIN_SYM,  KC_SPC,  KC_RCTL, KC_RALT
     ),
 
@@ -101,14 +105,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_F12, KC_F1, KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_BSPC,                       KC_PSCR,   KC_F6,    KC_F7,   KC_F8,  KC_F9,  KC_F10,  KC_F11,
           KC_TAB,  KC_Q,  KC_W,    KC_E,    KC_R,    KC_T,   KC_DEL,                      MAC_DFLT,    KC_Y,     KC_U,    KC_I,   KC_O,    KC_P, KC_BSPC,
           KC_ESC,  KC_A,  KC_S,    KC_D,    KC_F,    KC_G,   KC_ENT,                      TG_MOUSE,    KC_H,     KC_J,    KC_K,   KC_L, KC_SCLN,  KC_ENT,
-         KC_LSFT,  KC_Z,  KC_X,    KC_C,    KC_V,    KC_B, TG_MOUSE, KC_LCTL,    KC_RCTL,  KC_CAPS,    KC_N,     KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+         MT_LSFT,  KC_Z,  KC_X,    KC_C,    KC_V,    KC_B, TG_MOUSE, KC_LCTL,    KC_RCTL,  KC_CAPS,    KC_N,     KC_M, KC_COMM, KC_DOT, KC_SLSH, MT_RSFT,
                                MAC_DFLT, KC_LOPT, KC_LCMD,   KC_SPC, MAC_NUM,    MAC_NAV,  MAC_SYM,  KC_SPC,  KC_RCMD, KC_ROPT
     ),
 
     [_MAC_SYM] = LAYOUT(
         _______,  _______,  _______,  _______, _______, _______, _______,                      _______, _______, _______, _______,  _______, _______, _______,
         _______,  KC_EXLM,   MAC_AT, MAC_HASH,  KC_DLR, KC_PERC, _______,                      _______, KC_CIRC, KC_AMPR, KC_ASTR, MAC_DQUO, XXXXXXX, _______, 
-        _______,  UK_TAIL, MAC_TILD,  KC_PLUS, KC_LCBR, KC_RCBR, _______,                      _______, KC_LPRN, KC_RPRN,  KC_EQL,  KC_QUOT, KC_QUES, _______, 
+        _______, MAC_DBLS, MAC_TILD,  KC_PLUS, KC_LCBR, KC_RCBR, _______,                      _______, KC_LPRN, KC_RPRN,  KC_EQL,  KC_QUOT, KC_QUES, _______, 
         _______, MAC_BSLS, MAC_PIPE,  KC_UNDS, KC_LBRC, KC_RBRC, _______, _______,    _______, _______,   KC_LT,   KC_GT, KC_MINS, MAC_GRV,  KC_SLSH, _______, 
                                       _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______
     ),
