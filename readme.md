@@ -12,6 +12,11 @@ This is a keyboard firmware based on the [tmk_keyboard firmware](https://github.
 
 [/keyboards/jzg/cardboard68/keymaps/default/keymap.c](/keyboards/jzg/cardboard68/keymaps/default/keymap.c)
 
+Install dependencies
+```sh
+make git-submodule
+```
+
 To compile
 ```bash
 qmk compile -kb jzg/cardboard68 -km default 
