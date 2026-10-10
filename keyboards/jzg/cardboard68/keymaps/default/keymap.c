@@ -25,7 +25,8 @@ enum layers {
     _MAC_NUM,
     _MAC_NAV,
     _MOUSE,
-    _FPS
+    _FPS,
+    _VALHEIM
 };
 
 // Aliases for readability
@@ -35,6 +36,7 @@ enum layers {
 #define WIN_DFLT TO(_WIN_DFLT)
 #define MAC_DFLT TO(_MAC_DFLT)
 #define FPS      TO(_FPS)
+#define VALHEIM  TO(_VALHEIM)
 
 #define WIN_SYM  TT(_WIN_SYM)
 #define MAC_SYM  TT(_MAC_SYM)
@@ -135,9 +137,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_MOUSE] = LAYOUT(
         _______, _______, _______, _______, _______, _______, _______,                      _______,  _______, _______, _______, _______, _______, _______,
-        _______, KC_VOLU, KC_WH_L, KC_MS_U, KC_WH_R, KC_WH_U, _______,                      _______,      FPS, KC_VOLU, KC_PAUS, KC_MPRV, XXXXXXX, _______,
-        _______, KC_VOLD, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,                      _______, MAC_DFLT, KC_VOLD, KC_MPLY, KC_MNXT, XXXXXXX, _______,
-        _______, KC_MUTE, KC_WBAK, KC_WREF, KC_WFWD, XXXXXXX, _______, _______,    _______, _______, WIN_DFLT, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+        _______, KC_VOLU, KC_WH_L, KC_MS_U, KC_WH_R, KC_WH_U, _______,                      _______, MAC_DFLT, XXXXXXX, KC_VOLU, KC_PAUS, KC_MPRV, _______,
+        _______, KC_VOLD, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,                      _______, WIN_DFLT, VALHEIM, KC_VOLD, KC_MPLY, KC_MNXT, _______,
+        _______, KC_MUTE, KC_WBAK, KC_WREF, KC_WFWD, XXXXXXX, _______, _______,    _______, _______, XXXXXXXX,     FPS, KC_MUTE, XXXXXXX, XXXXXXX, _______,
                                    _______, _______, KC_BTN2, KC_BTN1, _______,    _______, _______,  _______, _______, _______
     ),
 
@@ -147,6 +149,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT, KC_NUBS,    KC_A,    KC_W,    KC_D,    KC_F, _______,                      _______, _______, _______, _______, _______, _______, _______,
            KC_B,    KC_G,    KC_Z,    KC_S,    KC_C,    KC_V,    KC_5,  KC_ESC,    _______, _______, _______, _______, _______, _______, _______, _______,
                                   WIN_DFLT, KC_LALT, KC_LCTL,  KC_SPC,    KC_4,    _______, _______, _______, _______, _______
+    ),
+
+    [_VALHEIM] = LAYOUT(
+         KC_F12,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   KC_F5,                      _______, _______, _______, _______, _______, _______, _______,
+         KC_TAB,    KC_T,    KC_Q,    KC_X,    KC_E,    KC_R, _______,                      _______, _______, _______, _______, _______, _______, _______,
+         KC_ESC,    KC_G,    KC_A,    KC_W,    KC_D,    KC_F, _______,                      _______, _______, _______, _______, _______, _______, _______,
+           KC_6,    KC_M,    KC_Z,    KC_S,    KC_C,    KC_V,    KC_7,    KC_8,    _______, _______, _______, _______, _______, _______, _______, _______,
+                                  WIN_DFLT, KC_LALT, KC_LSFT,  KC_SPC, KC_LCTL,    _______, _______, _______, _______, _______
     )
 
 
